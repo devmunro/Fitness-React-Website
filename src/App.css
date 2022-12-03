@@ -60,6 +60,15 @@ body {
   width: 700px;
   height: 900px;
   margin-top: -330px;
+  z-index: -1;
+
+}
+
+.display-word {
+  z-index: 1;
+  color: white;
+  text-shadow: black 5px 5px 2px;
+  -webkit-text-stroke: 10px black;
 
 }
 

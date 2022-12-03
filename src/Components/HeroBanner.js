@@ -13,6 +13,7 @@ function HeroBanner() {
         fontSize: {lg: "44px", xs:"40px"}}}>Sweat, Smile <br/> and Repeat</Typography>
         <Typography fontSize="22px" mb="4px" lineHeight="35px">Check out the most effective exercises</Typography>
         <Button variant="contained" color="error" href='#exercises'>Explore Exercises</Button>
+        <Typography fontWeight="600px" color="white" fontSize="200px" className="display-word" sx={{opacity: 0.5, display: {lg:"block", xs:"none"} }}>EXERCISE</Typography>
         <img src={HeroBannerImage} alt="banner"
         className="hero-banner-img"></img>
     </Box>
