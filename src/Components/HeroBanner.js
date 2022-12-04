@@ -46,7 +46,7 @@ function HeroBanner() {
       >
         EXERCISE
       </Typography>
-      <img src={HeroBannerImage} alt="banner" className="hero-banner-img"></img>
+      <img src={HeroBannerImage} alt="banner" className="hero-banner-img" loading="lazy"></img>
     </Box>
   );
 }
