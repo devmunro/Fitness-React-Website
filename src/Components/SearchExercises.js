@@ -3,37 +3,42 @@ import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { fetchData, exerciseOptions } from "../Utils/fetchData";
 import SideScrollBar from "./SideScrollBar";
 
-function SearchExercises() {
+function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
+  const [search, setSearch] = useState("");
 
-const [search, setSearch] = useState("")
-const [exercises,setExercises ] = useState([])
-const [bodyParts, setBodyParts] = useState([])
+  const [bodyParts, setBodyParts] = useState([]);
 
-useEffect(() => {
-const fetchExercisesData = async () => {
-    const bodyPartsData = await fetchData("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", exerciseOptions)
-    setBodyParts(["all", ...bodyPartsData])
-}
-fetchExercisesData();
-}, [])
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
+      setBodyParts(["all", ...bodyPartsData]);
+    };
+    fetchExercisesData();
+  }, []);
 
-const handleSubmit = async () => {
-if(search) {
-    const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
-    
-const searchedExercises = exerciseData.filter((exercise) => exercise.name.toLowerCase().includes(search) ||
-exercise.target.toLowerCase().includes(search) ||
-exercise.equipment.toLowerCase().includes(search) ||
-exercise.bodyPart.toLowerCase().includes(search) 
-)
+  const handleSubmit = async () => {
+    if (search) {
+      const exerciseData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises",
+        exerciseOptions
+      );
 
-setSearch("")
-setExercises(searchedExercises)
-console.log(exercises)
-}
+      const searchedExercises = exerciseData.filter(
+        (exercise) =>
+          exercise.name.toLowerCase().includes(search) ||
+          exercise.target.toLowerCase().includes(search) ||
+          exercise.equipment.toLowerCase().includes(search) ||
+          exercise.bodyPart.toLowerCase().includes(search)
+      );
 
-}
-
+      setSearch("");
+      setExercises(searchedExercises);
+     
+    }
+  };
 
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
@@ -69,14 +74,20 @@ console.log(exercises)
             textTransform: "none",
             width: { lg: "175px", xs: "80px" },
             fontSize: { lg: "20px", xs: "14px" },
-            height: "56px", position: "absolute", right: "0"
+            height: "56px",
+            position: "absolute",
+            right: "0",
           }}
         >
           SEARCH
         </Button>
       </Box>
-      <Box sx={{postion:"relative", width:"100%", p:"20px"}}>
-        <SideScrollBar data={bodyParts}/>
+      <Box sx={{ postion: "relative", width: "100%", p: "20px" }}>
+        <SideScrollBar
+          data={bodyParts}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
+        />
       </Box>
     </Stack>
   );
