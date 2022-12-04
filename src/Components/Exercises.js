@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Pagination } from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../Utils/fetchData";
+import ExerciseCards from "./ExerciseCards";
 
 function Exercises({ bodyPart, exercises, setExercises }) {
-  console.log(exercises)
+  
   return (
     <Box id="exercises" sx={{ mt: { lg: "110" } }} mt="50px" p="20px">
       <Typography variant="h4" mb="46px">
@@ -16,8 +17,8 @@ function Exercises({ bodyPart, exercises, setExercises }) {
         flexWrap="wrap"
         justifyContent="center"
       >
-        {/* {exercises.length > 1 && (exercises.map((exercise, index) => (<p>{exercise.name}</p>))) } */}
-
+        {exercises.map((exercise, index) => ( <ExerciseCards key={index} exercise={exercise}/> ))}
+     
       </Stack>
     </Box>
   );
