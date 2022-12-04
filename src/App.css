@@ -129,11 +129,11 @@ body {
   }
 
   .hero-banner-img {
-    width: 450px;
+    width: 480px;
     height: 500px;
     position: absolute;
     top: 250px;
-    right: 50px;
+    right: 0px;
     margin-top: -330px;
     z-index: -1;
   }
