@@ -4,7 +4,7 @@ import { Button, Stack, Typography } from "@mui/material";
 
 export default function ExerciseCards({ exercise, key }) {
   return (
-    <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
+    <Link key="key" className="exercise-card" to={`/exercise/${exercise.id}`}>
       <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
       <Stack direction="row">
         <p
