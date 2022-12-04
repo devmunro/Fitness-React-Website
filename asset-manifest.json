@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Fitness-React-Website/static/css/main.8046737f.css",
-    "main.js": "/Fitness-React-Website/static/js/main.92bba2e3.js",
+    "main.js": "/Fitness-React-Website/static/js/main.a44b3539.js",
     "static/media/absBanner.jpg": "/Fitness-React-Website/static/media/absBanner.6e071d266b08529d57dd.jpg",
     "index.html": "/Fitness-React-Website/index.html",
     "main.8046737f.css.map": "/Fitness-React-Website/static/css/main.8046737f.css.map",
-    "main.92bba2e3.js.map": "/Fitness-React-Website/static/js/main.92bba2e3.js.map"
+    "main.a44b3539.js.map": "/Fitness-React-Website/static/js/main.a44b3539.js.map"
   },
   "entrypoints": [
     "static/css/main.8046737f.css",
-    "static/js/main.92bba2e3.js"
+    "static/js/main.a44b3539.js"
   ]
 }
