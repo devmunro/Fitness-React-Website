@@ -20,6 +20,25 @@ function Exercises({ bodyPart, exercises, setExercises }) {
     window.scrollTo({ top: 1200, behaviour: "smooth" });
   };
 
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
+
+      if (bodyPart === "all") {
+        exercisesData = await fetchData(
+          "https://exercisedb.p.rapidapi.com/exercises",
+          exerciseOptions
+        );
+      } else {
+        exercisesData = await fetchData(
+          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
+          exerciseOptions
+        );
+      }
+      setExercises(exercisesData);
+    };
+    fetchExercisesData()
+  }, [bodyPart]);
   return (
     <Box id="exercises" sx={{ mt: { lg: "110" } }} mt="50px" p="20px">
       <Typography variant="h4" mb="46px">
@@ -30,7 +49,7 @@ function Exercises({ bodyPart, exercises, setExercises }) {
         count={Math.ceil(exercises.length / exercisesPerPage)}
         page={currentPage}
         onChange={paginate}
-        sx={{mb:"20px"}}
+        sx={{ mb: "20px" }}
       />
       <Stack
         direction="row"

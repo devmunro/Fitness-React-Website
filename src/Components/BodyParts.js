@@ -13,8 +13,7 @@ import UpperLegs from "../assets/assets/icons/bodyParts/upperleg.png";
 import Waist from "../assets/assets/icons/bodyParts/abs.png";
 
 export default function BodyParts({ item, setBodyPart, bodyPart }) {
-  console.log(item)
-  console.log(bodyPart)
+
   return (
     <Stack
       type="button"
