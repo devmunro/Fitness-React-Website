@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { fetchData, exerciseOptions } from "../Utils/fetchData";
+import SideScrollBar from "./SideScrollBar";
 
 function SearchExercises() {
 
@@ -73,6 +74,9 @@ console.log(exercises)
         >
           SEARCH
         </Button>
+      </Box>
+      <Box sx={{postion:"relative", width:"100%", p:"20px"}}>
+        <SideScrollBar data={bodyParts}/>
       </Box>
     </Stack>
   );
