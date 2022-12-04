@@ -18,7 +18,7 @@ direction="row"
 gap="40px"
 fontSize="24px"
 alignItems="flex-end">
-    <Link to="/" style={{textdecoration: 'none', color: 'white', borderBottom: '3px solid #FF2625'}}>Home</Link>
+    <Link to="/Fitness-React-Website" style={{textdecoration: 'none', color: 'white', borderBottom: '3px solid #FF2625'}}>Home</Link>
     <a href="#exercises" style={{textdecoration: 'none', color: 'white'}}> Exercises</a>
 </Stack>
     </Stack>
