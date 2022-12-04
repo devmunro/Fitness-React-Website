@@ -5,7 +5,6 @@ import SideScrollBar from "./SideScrollBar";
 
 function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
   const [search, setSearch] = useState("");
-
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
@@ -36,7 +35,6 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 
       setSearch("");
       setExercises(searchedExercises);
-     
     }
   };
 

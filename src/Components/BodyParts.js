@@ -13,22 +13,38 @@ import UpperLegs from "../assets/assets/icons/bodyParts/upperleg.png";
 import Waist from "../assets/assets/icons/bodyParts/abs.png";
 
 export default function BodyParts({ item, setBodyPart, bodyPart }) {
+  console.log(item)
+  console.log(bodyPart)
   return (
     <Stack
       type="button"
       alignItems="center"
       justifyContent="center"
       className="bodyPart-card"
-      sx={{
-        borderTop: bodyPart === item && "24px solid black",
-        backgroundColor: "lightGray",
-        borderBottomLeftRadius: "20px",
-        width: "270px",
-        height: "280px",
-        cursor: "pointer",
-        gap: "47px",
+      sx={
+        bodyPart === item
+          ? {
+              borderTop: "4px solid #FF2625",
+              background: "#fff",
+              borderBottomLeftRadius: "20px",
+              width: "270px",
+              height: "282px",
+              cursor: "pointer",
+              gap: "47px",
+            }
+          : {
+              background: "#fff",
+              borderBottomLeftRadius: "20px",
+              width: "270px",
+              height: "282px",
+              cursor: "pointer",
+              gap: "47px",
+            }
+      }
+      onClick={() => {
+        setBodyPart(item);
+        window.scrollTo({ top: 1200, left: 100, behavior: "smooth" });
       }}
-      
     >
       <img
         src={
@@ -52,8 +68,10 @@ export default function BodyParts({ item, setBodyPart, bodyPart }) {
         fontWeight="bold"
         color="#3A1212"
         textTransform="capitalize"
-        onClick={() => { setBodyPart(item)
-        window.scrollTo({top:1800, left:100, behaniour:"smooth"})}}
+        onClick={() => {
+          setBodyPart(item);
+          window.scrollTo({ top: 1800, left: 100, behaniour: "smooth" });
+        }}
       >
         {item}
       </Typography>
