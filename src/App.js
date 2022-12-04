@@ -12,8 +12,8 @@ function App() {
     <Box width="400px" sx={{width: {xl: '1488px'}}} m="auto">
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/exercise/:id" element={<ExerciseDetails/>}></Route>
+        <Route path="/Fitness-React-Website" element={<Home/>}></Route>
+        <Route path="/Fitness-React-Website/exercise/:id" element={<ExerciseDetails/>}></Route>
       </Routes>
       <Footer/>
     </Box>
