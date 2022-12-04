@@ -10,7 +10,7 @@ function Navbar() {
     justifyContent="space-around"
     backgroundColor="#110920"
     sx={{gap:{sm:'122px', xs:'40px'}, justifyContent: 'none'}} px="20px" width="100%">
-        <Link to="/">
+        <Link to="/Fitness-React-Website">
         <img src={Logo} alt="Gym Logo of a muscle flex" style={{width: '48px', height: '48px', margin: '0 20px'}}></img>
         </Link>
 <Stack
