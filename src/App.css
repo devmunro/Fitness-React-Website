@@ -16,18 +16,15 @@ body {
 .right-arrow,
 .left-arrow {
   cursor: pointer;
-  background: transparent;
   outline: none;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ff2625;
+  background-color: black;
+  padding: 0, 20px;
   font-size: 25px;
   border-radius: 4px;
-  position: absolute;
-  bottom: -20px;
-  right: 80px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
@@ -145,8 +142,6 @@ body {
     display: block;
   }
 
-
-
   .exercise-card {
     width: 320px;
   }
@@ -158,22 +153,17 @@ body {
 }
 
 @media screen and (max-width: 800px) {
- 
-  .hero-banner-img  {
+  .hero-banner-img {
     display: none;
   }
-
- 
 }
-
-
 
 @media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
   }
 
-  .hero-banner-img  {
+  .hero-banner-img {
     display: none;
   }
 
