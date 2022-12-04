@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Stack} from '@mui/material'
-import Logo from '../assets/assets/images/Logo.png'
+import Logo from '../assets/assets/icons/bodyParts/fit.png'
 
 function Navbar() {
   return (
