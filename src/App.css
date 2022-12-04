@@ -51,10 +51,10 @@ body {
 
 .hero-banner-img {
   position: absolute;
-  right: 40px;
-  top: 0px;
+  right: 0px;
+  top: 110px;
   width: 700px;
-  height: 900px;
+  height: 800px;
   margin-top: -330px;
   z-index: -1;
 }
@@ -130,9 +130,9 @@ body {
 
   .hero-banner-img {
     width: 450px;
-    height: 400px;
+    height: 500px;
     position: absolute;
-    top: 300px;
+    top: 250px;
     right: 50px;
     margin-top: -330px;
     z-index: -1;
