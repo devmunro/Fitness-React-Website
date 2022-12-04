@@ -13,7 +13,7 @@ function HeroBanner() {
       position="relative"
       p="20px"
     >
-      <Typography color="#FF2625" fontWeigth="600" fontSize="26px">
+      <Typography color="#FF2625" fontWeight="600" fontSize="26px">
         Fitness Club
       </Typography>
       <Typography

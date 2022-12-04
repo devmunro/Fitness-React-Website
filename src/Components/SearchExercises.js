@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-
+import { fetchData, exerciseOptions } from "../Utils/fetchData";
 
 function SearchExercises() {
 
 const [search, setSearch] = useState("")
-
+const [exercises,setExercises ] = useState("")
 
 const handleSubmit = async () => {
 if(search) {
-    const exerciseDate = await fetchData()
+    const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
+    
+const searchedExercises = exerciseData.filter((exercise) => exercise.name.toLowerCase().includes(search) ||
+exercise.target.toLowerCase().includes(search) ||
+exercise.equipment.toLowerCase().includes(search) ||
+exercise.bodyPart.toLowerCase().includes(search) 
+)
+
+setSearch("")
+setExercises(searchedExercises)
+console.log(exercises)
 }
 
 }
@@ -30,7 +40,7 @@ if(search) {
         <TextField
           height="76px"
           value={search}
-          onChange={(e) => setSearch(e.target.value.toLowerCase)}
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search exercises"
           type="text"
           sx={{
