@@ -2,7 +2,7 @@ import React from 'react'
 
 function ExerciseDetails() {
   return (
-    <div>ExerciseDetails</div>
+    <h1>Exercise Page - Comming Soon</h1>
   )
 }
 
