@@ -2,7 +2,10 @@ import React from 'react'
 
 function ExerciseDetails() {
   return (
-    <h1>Exercise Page - Comming Soon</h1>
+    <div>
+    <br/>
+    <h1>Exercise Page - Coming Soon</h1>
+    </div>
   )
 }
 
