@@ -42,7 +42,7 @@ export default function BodyParts({ item, setBodyPart, bodyPart }) {
       }
       onClick={() => {
         setBodyPart(item);
-        window.scrollTo({ top: 1200, left: 100, behavior: "smooth" });
+        window.scrollTo({ top: 1600, left: 100, behavior: "smooth" });
       }}
     >
       <img
